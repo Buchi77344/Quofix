@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange Rate</title>
+</head>
+<body>
+    <h1>Exchange Rate Information</h1>
+    <div class="container">
+        <div class="wallet">
+            <p>Naira Wallet</p>
+            <p class="balance">&#8358; {{wallet.balance}}</p>
+            <div class="action">
+            </div>
+        </div>
+        <div class="wallet">
+            <p>USD Wallet</p>
+            <p class="balance">$ {{usd.balance}}</p>
+            <div class="action">
+            </div>
+        </div>
+    </div>
+    <div id="message"></div>
+    {% for messages in messages  %}
+    <h3>{{messages}}</h3>
+    {% endfor %}
+
+    <p class="message">Your transaction has been completed</p>
+
+    <div class="container">
+        {% if request.user.is_authenticated %}
+      
+        <div id="countdown" >Time remaining: <span id="remaining-time"></span> seconds</div>
+        <form id="exchange-form" method = "post">
+            {% csrf_token %}
+            <label for="amount">Amount (USD):</label>
+            <input type="number" id="amount" name="amount" step="0.01" min="0.01" required>
+            <button id= "exchange-button" type="submit">Exchange</button> 
+        </form>
+        <p>Countdown: <span id="countdown"></span></p>
+        <h2>Converted Amount &#8358; <span id="converted-amount">0.00</span></h2>
+        {% else %}
+        <h4>please login</h4>
+
+    </div>    
+    {% endif %}   
+
+
+     
+    
+
+
+
+
+   
+<script>
+    let storedTime;
+    document.addEventListener("DOMContentLoaded", function() {
+        let amountInput = document.getElementById("amount");
+        let countDownDate;
+        let currDate = new Date()
+        currDate.setSeconds(currDate.getSeconds() + 50)
+        let timeBool = false;
+        let storedInputValue;
+        
+        let getFetchFunc = async() => {
+            let res = await fetch("getapi")
+            let data = await res.json()
+            storedTime = data.time
+            storedInputValue = data.inputvalue
+            console.log(data)
+            if (storedTime == true) {
+                countDownDate = new Date(data.stamp)
+                countDownFunc();
+                document.getElementById('exchange-button').disabled = true;
+                amountInput.value = parseFloat(data.inputvalue)
+            } else if (storedTime == false) {
+                document.getElementById('exchange-button').disabled = false;
+            }
+            console.log(storedTime)
+            console.log(timeBool)
+        }
+
+
+        getFetchFunc()
+
+        
+        let messageEl = document.querySelector(".message");
+        
+        let useFetchFunc = async(timeBool = false, countDownDate = currDate) => {
+            try{
+                console.log("start")
+                console.log(timeBool)
+                console.log(countDownDate.toString())
+                console.log(typeof amountInput.value)
+                let res = await fetch('fetchapi', {
+                    method : "POST",
+                    headers : {
+                        "Content-Type" : "application/json",
+                        "X-CSRFToken" : "{{csrf_token}}"
+                    },
+                    body: JSON.stringify(
+                        {
+                            timeBool :  timeBool,
+                            countDownDate : countDownDate.toString(),
+                            inputValue : amountInput.value
+
+                        }
+                    )
+                })
+                if(!res.ok){
+                    console.log("Network response did not go well")
+                }
+                let data = await res.json()
+                console.log(data)
+            }catch(err){
+                console.error(err)
+            }finally{
+                console.log("done")
+            }
+        }
+
+        let updateFetchFunc = (timeFetch) => {
+            fetch("fetch", {
+                method : "POST",
+                headers : {
+                    "Content-Type" : "application/json",
+                    "X-CSRFToken" : "{{csrf_token}}"
+                },
+                body : JSON.stringify({
+                    timeFetch : timeFetch,
+                })
+            })
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .catch(err => console.log(err))
+        }
+
+        function initiateMessage() {
+            messageEl.style.display = "block";
+            messageEl.classList.add("hide");
+            setTimeout(() => {
+                countDownDate = new Date();
+                countDownDate.setSeconds(countDownDate.getSeconds() + 50);
+                countDownFunc();
+                //localStorage.setItem("countDownDate", JSON.stringify(countDownDate));
+                messageEl.style.display = "none";
+                useFetchFunc(timeBool, countDownDate)
+            }, 2000);
+        }
+    
+        function initiateExchange() {
+            countDownDate = "";
+            //localStorage.clear();
+            timeBool = true;
+            //localStorage.setItem("timeBool", JSON.stringify(timeBool));
+            //storedTime = JSON.parse(localStorage.getItem("timeBool"));
+            initiateMessage();
+            var amount = parseFloat(amountInput.value);
+            document.getElementById('exchange-button').disabled = true;
+        }
+    
+        function countDownFunc() {
+            let timeFetch = false;
+            var x = setInterval(function() {
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+                var hours = Math.floor(distance / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                document.getElementById("countdown").textContent = `${hours < 0 ? 0 : hours} h ${minutes < 0 ? 0 : minutes} m ${seconds < 0 ? 0 : seconds} s`;
+                if (distance < 0) {
+                    clearInterval(x);
+                    timeBool = false;
+                    updateFetchFunc(timeFetch)
+
+                    
+                    //localStorage.setItem("timeBool", JSON.stringify(timeBool));
+                    document.getElementById('exchange-button').disabled = false;
+                    if(document.getElementById('amount').value !== ""){
+                        document.getElementById('exchange-form').submit();
+                    }else{
+                        console.log("no value in input")
+                    }
+                }
+            }, 1000);
+        }
+    
+ 
+        
+        document.getElementById('exchange-button').addEventListener('click', function(event) {
+            event.preventDefault();
+            if (amountInput.value !== "") {
+                initiateExchange();
+            }
+        });
+    });
+    
+
+    
+
+    
+
+  
+    var api_key = 'b7ff85d0b03d4e070f723655';
+    // Function to handle input event on the amount field
+    function handleAmountInput() {
+        var amount = document.getElementById('amount').value;
+        fetch(`https://v6.exchangerate-api.com/v6/${api_key}/pair/USD/NGN/${amount}`)
+            .then(response => response.json())
+            .then(data => {
+                // Update the converted amount in the UI
+                var convertedAmount = document.getElementById('converted-amount');
+                convertedAmount.textContent = data.conversion_result;
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    // Add event listener to the amount input field
+    document.getElementById('amount').addEventListener('input', handleAmountInput);
+
+
+
+</script>
+
+  
+   
+</body>
+</html>
+
+   
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .wallet {
+            flex-basis: 45%;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .balance {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .action {
+            text-align: center;
+        }
+
+        .message{
+            color : white;
+            background : green;
+            padding : 15px 10px;
+            width : 90%;
+            border-radius : 10px;
+            max-width : 400px;
+            text-align : center;
+            margin : 5px auto;
+            display : none;
+        }
+
+        .hide{
+            animation : hideMessage .5s linear 1s forwards;
+        }
+
+        @keyframes hideMessage {
+            0%{
+                transform : translateY(0);
+                opacity : 1;
+            }
+
+            100%{
+                transform : translateY(-10px);
+                opacity : 0;
+            }
+        }
+
+        .action button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .action button:last-child {
+            margin-right: 0;
+        }
+
+        .action button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+    
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+            }
+    
+            .container {
+                max-width: 400px;
+                margin: 50px auto;
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+    
+            h1 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+    
+            .conversion-rate {
+                font-size: 36px;
+                font-weight: bold;
+                color: #333;
+                margin-bottom: 20px;
+            }
+    
+            .conversion-label {
+                font-size: 18px;
+                color: #666;
+                margin-bottom: 20px;
+            }
+    
+            .amount-input {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                font-size: 16px;
+            }
+        </style>
+    
+    

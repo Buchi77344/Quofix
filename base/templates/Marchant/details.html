@@ -1,0 +1,26 @@
+<h2>{{gree}}</h2>
+
+
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deposit Page</title>
+</head>
+<body>
+    <h1>Ledger Balance: ${{ ledger_balance.user.username }}</h1>
+    <h1>Ledger Balance: ${{ ledger_balance.balance }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="amount">Enter Amount:</label>
+        <input type="number" id="amount"  name="amount" step="0.01" required><br>
+        <input type="radio" id="add" name="action" value="add" checked>
+        <label for="add">Add</label>
+        <input type="radio" id="subtract" name="action" value="subtract">
+        <label for="subtract">Subtract</label><br>
+        <button type="submit">Submit</button>
+    </form>
+       <a href="{% url 'admins:approve' %}"> Admin</a>
+</body>
+</html>

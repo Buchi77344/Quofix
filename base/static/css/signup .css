@@ -1,0 +1,383 @@
+.signup-child {
+  height: 70px;
+  width: 180px;
+  position: relative;
+  object-fit: contain;
+}
+.create-an-account {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+}
+.please-tell-us {
+  position: relative;
+}
+.about-yourself {
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0 19px 0 18px;
+  font-size: var(--body-text-size);
+}
+.about-yourself,
+.user-details,
+.user-questions {
+  display: flex;
+  align-items: flex-start;
+}
+.user-details {
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.user-questions {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: center;
+}
+.input-fields-updateddefault5,
+.input-fields-updateddefault6 {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: var(--color-ghostwhite);
+  height: 55px;
+  flex: 1;
+  border-radius: var(--br-9xs);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-mid) var(--padding-2xl-5);
+  box-sizing: border-box;
+  font-family: var(--body-text);
+  font-weight: 300;
+  font-size: var(--body-text-size);
+  color: var(--faded-purple);
+  min-width: 179px;
+}
+.input-fields-updateddefault-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--gap-5xs);
+}
+.who-do-you3 {
+  width: 300px;
+  position: relative;
+  font-size: var(--body-text-size);
+  font-family: var(--body-text);
+  color: var(--faded-purple);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.text-fields3 {
+  flex: 1;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-ghostwhite);
+  overflow: hidden;
+  padding: var(--padding-mid) var(--padding-base);
+  box-sizing: border-box;
+}
+.input-fields-updateddefault7,
+.input-fields1,
+.text-fields3 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.input-fields-updateddefault7 {
+  flex: 1;
+}
+.input-fields1 {
+  align-self: stretch;
+  padding: 0 var(--padding-9xs);
+  box-sizing: border-box;
+}
+.more-options {
+  height: 21px;
+  width: 21px;
+  position: relative;
+  border-radius: 50%;
+}
+.scroll-vertical-arrows-icon {
+  width: 7.8px;
+  height: 16.4px;
+  position: relative;
+}
+.audience-input,
+.scrolling {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.scrolling {
+  flex-direction: column;
+  padding: var(--padding-10xs-3) 0 0;
+}
+.audience-input {
+  flex-direction: row;
+  gap: var(--gap-5xs);
+}
+.who-do-you4 {
+  width: 230px;
+  position: relative;
+  font-size: var(--body-text-size);
+  font-family: var(--body-text);
+  color: var(--faded-purple);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.input-fields-updateddefault8,
+.text-fields4 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.text-fields4 {
+  flex: 1;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-ghostwhite);
+  overflow: hidden;
+  padding: var(--padding-mid) var(--padding-base);
+  box-sizing: border-box;
+  gap: 20px;
+}
+.input-fields-updateddefault8 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.group-icon {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+}
+.input-fields-updateddefault-group {
+  height: 55px;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+}
+.input-fields2 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-9xs);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.input-fields3,
+.who-do-you5 {
+  font-size: var(--body-text-size);
+  font-family: var(--body-text);
+  color: var(--faded-purple);
+  display: flex;
+}
+.input-fields3 {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: var(--color-ghostwhite);
+  align-self: stretch;
+  height: 55px;
+  border-radius: var(--br-5xs);
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-mid) var(--padding-xl);
+  box-sizing: border-box;
+  min-width: 250px;
+}
+.who-do-you5 {
+  width: 300px;
+  position: relative;
+  text-align: left;
+  align-items: center;
+  flex-shrink: 0;
+}
+.input-fields-updateddefault9,
+.text-fields5 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.text-fields5 {
+  flex: 1;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-ghostwhite);
+  overflow: hidden;
+  padding: var(--padding-mid) var(--padding-base);
+  box-sizing: border-box;
+}
+.input-fields-updateddefault9 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.dark-eye-2-icon {
+  position: absolute;
+  top: 18px;
+  left: 498px;
+  width: 19.7px;
+  height: 19px;
+  overflow: hidden;
+  z-index: 1;
+}
+.input-fields-updateddefault-container {
+  height: 55px;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+}
+.input-fields4 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-9xs);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.download-form7 {
+  position: relative;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  font-family: var(--font-raleway);
+  color: var(--color-white);
+  text-align: left;
+  display: inline-block;
+  min-width: 36px;
+}
+.primary-button-wrapper,
+.primary-button5 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.primary-button5 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-mini) var(--padding-41xl);
+  background-color: var(--color-darkslategray-200);
+  border-radius: var(--br-5xl-5);
+  justify-content: flex-start;
+  opacity: 0.3;
+}
+.primary-button5:hover {
+  background-color: var(--color-slategray-100);
+}
+.primary-button-wrapper {
+  align-self: stretch;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+}
+.frame-group,
+.information-panel1 {
+  align-self: stretch;
+  flex-direction: column;
+  max-width: 100%;
+}
+.frame-group {
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-13xl);
+}
+.information-panel1 {
+  border-radius: var(--br-5xl);
+  background-color: var(--color-white);
+  padding: var(--padding-33xl) var(--padding-31xl) var(--padding-31xl);
+  gap: 52px;
+}
+.information-panel1,
+.main-view,
+.signup {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.main-view {
+  width: 658px;
+  flex-direction: column;
+  padding: 39px 0 0;
+  max-width: 100%;
+}
+.signup {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-lavender);
+  overflow: hidden;
+  flex-direction: row;
+  padding: var(--padding-17xl) var(--padding-16xl) 76px;
+  gap: 176px;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--color-black);
+  font-family: var(--body-text);
+}
+@media screen and (max-width: 1050px) {
+  .signup {
+    flex-wrap: wrap;
+    gap: 88px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .input-fields-updateddefault-parent {
+    flex-wrap: wrap;
+  }
+  .frame-group {
+    gap: var(--gap-base);
+  }
+  .information-panel1 {
+    gap: 26px;
+    padding: var(--padding-15xl) var(--padding-6xl) var(--padding-13xl);
+    box-sizing: border-box;
+  }
+  .signup {
+    gap: 44px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .create-an-account {
+    font-size: var(--font-size-lgi);
+  }
+  .text-fields4 {
+    flex-wrap: wrap;
+  }
+  .input-fields-updateddefault-group {
+    height: auto;
+    min-height: 55;
+  }
+  .signup {
+    gap: 22px;
+  }
+}

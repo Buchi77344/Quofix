@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'css/global.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/NewsUpdates.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Work Sans:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Satoshi Variable:wght@400;500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Podkova:wght@500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mandali:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="news-updates">
+      <div class="main-layout">
+        <div class="main-layout-child"></div>
+        <div class="content-area1">
+          <img
+            class="shape-icon"
+            loading="lazy"
+            alt=""
+            src="{% static './public/20240408-161529-1@2x.png' %}"
+          />
+        </div>
+        <div class="navigation-panel">
+          <button class="workspace">
+            <img
+              class="dashboard-1-11"
+              alt=""
+              src="{% static './public/dashboard-1-1.svg' %}"
+            />
+
+            <div class="dashboard-wrapper">
+              <div class="dashboard2">Dashboard</div>
+            </div>
+          </button>
+          <div class="navigation-buttons">
+            <img
+              class="computer-1-11"
+              loading="lazy"
+              alt=""
+              src="{% static './public/computer-1-1.svg' %}"
+            />
+
+            <div class="transactions1">Transactions</div>
+          </div>
+          <div class="navigation-buttons1">
+            <img
+              class="log-out-1-icon1"
+              loading="lazy"
+              alt=""
+              src="{% static './public/logout-1.svg' %}"
+            />
+
+            <div class="log-out1">Log Out</div>
+          </div>
+        </div>
+      </div>
+      <section class="admin-panel">
+        <div class="updates-management">
+          <header class="updates-header">
+            <h3 class="news-updates1">News Updates</h3>
+            <button class="admin-controls">
+              <img
+                class="add-button-1-icon1"
+                alt=""
+                src="{% static './public/addbutton-1.svg' %}"
+              />
+
+              <div class="admin-registration-label">
+                <div class="register-a-new1">Register a new Admin</div>
+              </div>
+            </button>
+          </header>
+          <div class="updates-input">
+            <div class="input-fields4">
+              <h1 class="add-updates">Add Updates</h1>
+              <input class="frame-input1" type="checkbox" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

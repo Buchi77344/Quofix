@@ -1,0 +1,7 @@
+<h1>Are you sure you want to delete transaction</h1> 
+
+<form method= 'POST'>
+{% csrf_token %}
+<button>DELETE</button>
+</form>
+<h4>click on this link to go back </h4><a href="{% url 'admins:index' %}">click now</a>

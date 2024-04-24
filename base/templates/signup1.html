@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'css/global.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/log-in.css' %}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap" />
+
+    <style>
+        /* CSS styles for the input fields */
+        .enter-your-username-wrapper,
+        .enter-your-password-prompt {
+            border: 1px solid var(--color-lavender-100); /* Add border for better visibility */
+            padding: 8px; /* Add padding for better spacing */
+            width: 300px; /* Adjust the width of the input fields */
+            height: 40px; /* Adjust the height of the input fields */
+            background-color: var(--color-lavender-100);
+        }
+
+        /* CSS styles for the placeholder text */
+        ::placeholder {
+            font-size: 14px; /* Adjust the font size as needed */
+            color: #999; /* Change the color of the placeholder text */
+        }
+    </style>
+</head>
+
+
+<body>  
+<form method ="POST" >
+{% csrf_token %}
+    <div class="log-in">
+        <img class="photoroom-20240316-165736-1" loading="lazy" alt="" src="{% static './public/photoroom20240316-165736-1-1@2x.png' %}" />
+
+        <main class="currency-bro-1-parent">
+            <img class="currency-bro-1-icon" loading="lazy" alt="" src="{% static './public/currencybro-1.svg' %}" />
+
+            <div class="frame-wrapper">
+                <div class="frame-parent">
+                    <div class="frame-group">
+                        <button class="rectangle-parent">
+                            <div class="frame-child"></div>
+                            <div class="log-in1">Log in</div>
+                        </button>
+                        <button class="rectangle-group">
+                            <div class="frame-item"></div>
+                            <div class="create-account">Create account</div>
+                        </button>
+                    </div>
+                    <div class="enter-username-parent">
+                        <div class="enter-username">
+                            <div class="enter-username-inner">
+                                <div class="welcome-back-parent">
+                                    <h1 class="welcome-back">Welcome back</h1>
+                                    <img class="tdesignwave-right-icon" loading="lazy" alt="" src="{% static './public/tdesignwaveright.svg' %}" />
+                                </div>
+                            </div>
+                        </div>
+                      
+                                    <div class="rectangle-container">
+                            <div class="frame-inner"></div>
+                            <button class="frame-button">
+                                <div class="rectangle-div"></div>
+                                <div class="username">First Name:</div>
+                            </button>
+                            <input type="text" name =first_name  class="enter-your-username-wrapper" placeholder="Enter your first name">
+                        </div>
+                        
+                        <div class="frame-container">
+                            <div class="frame-div">
+                                <div class="group-div">
+                                    <div class="frame-child1"></div>
+                                    <button class="rectangle-parent1">
+                                        <div class="frame-child2"></div>
+                                        <div class="password"> Last Name:</div>
+                                    </button>
+                                    <!-- Updated size of password input field -->
+                                    <input type="text" name= "last_name" class="enter-your-password-prompt" placeholder="Enter your last name ">
+                                </div>
+                            </div>
+                        </div>  <div class="rectangle-container">
+                          <div class="frame-inner"></div>
+                          <button class="frame-button">
+                              <div class="rectangle-div"></div>
+                              <div class="username">E-mail Address:</div>
+                          </button>
+                          <input type="email" name="email" class="enter-your-username-wrapper" placeholder="Enter your e-mail address">
+                      </div>
+                    
+                        <div class="rectangle-container">
+                          <div class="frame-inner"></div>
+                          <button class="frame-button">
+                              <div class="rectangle-div"></div>
+                              <div class="username">Phone Number:</div>
+                          </button>
+                          <input type="text" name= "phone_number"class="enter-your-username-wrapper" placeholder=" Enter your phone number">
+                      </div>
+                    
+                        <div class="log-in-button">
+                            <img class="mdihide-outline-icon" loading="lazy" alt="" src="{% static './public/mdihideoutline.svg' %}" />
+                        </div>
+                    </div>
+                </div>
+                <div class="frame-wrapper1">
+                    <button class="group-button">
+                        <div class="frame-child3"></div>
+                        <div class="log-in2">Next</div>
+                    </button>
+                </div>
+                <div class="forgot-password-label">
+                    <div class="forgot-password" href="reset-password-2.html">Forgot password?</div>
+                </div>
+            </div>
+        </main>
+    </div>
+                        </form>
+            
+</body>
+</html>

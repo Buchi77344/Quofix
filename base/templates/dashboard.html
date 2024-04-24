@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'css/global.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/d-a-s-h-b-o-a-r-d.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap"
+    />
+  </head>
+  <body>
+    <div class="dash-board1">
+      <div class="vector-group">
+        <img class="frame-child19" loading="lazy" alt="" />
+
+        <div class="frame-parent7">
+          <div class="frame-wrapper">
+            <img
+              class="frame-child20"
+              loading="lazy"
+              alt=""
+              src="{% static './public/group-23@2x.png' %}"
+            />
+          </div>
+          <div class="frame-parent8">
+            <div class="dashboard-container">
+              <b class="dashboard1">Dashboard</b>
+            </div>
+            <div class="rates-wrapper">
+              <div class="rates1">Rates</div>
+            </div>
+          </div>
+        </div>
+        <div class="buywithdraw-wrapper">
+          <div class="buywithdraw1">Buy/withdraw</div>
+        </div>
+        <div class="transfer-wrapper">
+          <div class="transfer1">Transfer</div>
+        </div>
+        <div class="frame-wrapper1">
+          <div class="kyc-parent">
+            <div class="kyc1">KYC</div>
+            <div class="dashboard-title">
+              <div class="wrapper-group-1171274900-group">
+                <div class="wrapper-group-11712749001">
+                  <img
+                    class="wrapper-group-1171274900-item"
+                    alt=""
+                    src="{% static './public/group-1171274900.svg' %}"
+                  />
+                </div>
+                <img
+                  class="coinsrafiki-icon1"
+                  loading="lazy"
+                  alt=""
+                  src="{% static './public/coinsrafiki.svg' %}"
+                />
+
+                <div class="frame-wrapper2">
+                  <button class="vector-container">
+                    <img
+                      class="frame-child21"
+                      alt=""
+                      src="{% static './public/rectangle-40505.svg' %}"
+                    />
+
+                    <div class="enjoy-your-best1">Enjoy your best</div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="frame-wrapper3">
+          <div class="settings-group">
+            <div class="settings1">Settings</div>
+            <button class="group-button">
+              <div class="frame-child22"></div>
+              <div class="log-out1">Log out</div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <section class="dash-board-inner">
+        <div class="frame-parent9">
+          <div class="frame-parent10">
+            <header class="frame-header">
+              <div class="frame-wrapper4">
+                <img
+                  class="frame-child23"
+                  loading="lazy"
+                  alt=""
+                  src="{% static './public/group-1171275064.svg' %}"
+                />
+              </div>
+              <div class="available-balance-container">
+                <div class="ledger-balance-container">
+                  <img
+                    class="ledger-balance-container-child"
+                    loading="lazy"
+                    alt=""
+                    src="{% static './public/group-1171275065.svg' %}"
+                  />
+
+                  <h1 class="account-id">Account ID</h1>
+                </div>
+                <div class="solarcopy-linear-parent">
+                  <img
+                    class="solarcopy-linear-icon"
+                    loading="lazy"
+                    alt=""
+                    src="{% static '/public/solarcopylinear.svg' %}"
+                  />
+
+                  <div class="ch578b295j">{{profile.profile_id}}</div>
+                </div>
+              </div>
+            </header>
+            <div class="frame-wrapper5">
+              <div class="frame-parent11">
+                <div class="frame-parent12">
+                  <div class="available-balance-500000000-wrapper">
+                    <div class="available-balance-500000000-container">
+                      <span class="available-balance-500000000-container1">
+                        <p class="available-balance">Available Balance</p>
+                        <p class="blank-line">
+                          <b>&nbsp;</b>
+                        </p>
+                        <p class="p">#{{balance.balance}}</p>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="ledger-balance-300000000-wrapper">
+                    <div class="ledger-balance-300000000-container">
+                      <span class="ledger-balance-300000000-container1">
+                        <p class="ledger-balance">Ledger Balance</p>
+                        <p class="blank-line1">
+                          <b>&nbsp;</b>
+                        </p>
+                        <p class="p1">#{{ledger_balance.balance}}</p>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="frame-parent13">
+                    <button class="frame-button">
+                      <img
+                        class="vector-icon6"
+                        alt=""
+                        src="{% static 'public/vector4.svg' %}"
+                      />
+                     <a href="withdraw">
+                      <div class="withdraw-funds">Withdraw Funds</div>
+                    </a>
+                    </button>
+                    <button class="vector-parent1">
+                      <img
+                        class="vector-icon7"
+                        alt=""
+                        src="{% static '/public/vector5.svg' %}"
+                      />
+
+                      <div class="funds-wallet">Funds Wallet</div>
+                    </button>
+                  </div>
+                </div>
+                <div class="frame-wrapper6">
+                  <div class="frame-parent14">
+                    <img
+                      class="frame-child24"
+                      loading="lazy"
+                      alt=""
+                      src="{% static './public/group-29669@2x.png' %}"
+                    />
+
+                    <div class="good-day-parent">
+                      <div class="good-day">{{greet}}</div>
+                      <div class="omologo-eleniyan">Omologo Eleniyan</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="frame-parent15">
+            <div class="frame-parent16">
+              <img
+                class="frame-child25"
+                alt=""
+                src="{% static './public/group-1171275034.svg' %}"
+              />
+
+              <div class="frame-wrapper7">
+                <div class="solardollar-bold-duotone-parent">
+                  <img
+                    class="solardollar-bold-duotone-icon2"
+                    loading="lazy"
+                    alt=""
+                    src="{% static './public/solardollarboldduotone2.svg' %}"
+                  />
+
+                  <div class="frame-wrapper8">
+                    <div class="vector-parent2">
+                      <img
+                        class="vector-icon8"
+                        alt=""
+                        src="{% static './public/vector6.svg' %}"
+                      />
+
+                      <img
+                        class="vector-icon9"
+                        alt=""
+                        src="{% static './public/vector7.svg' %}"
+                      />
+
+                      <img
+                        class="vector-icon10"
+                        alt=""
+                        src="{% static './public/vector8.svg' %}"
+                      />
+
+                      <img
+                        class="vector-icon11"
+                        alt=""
+                        src="{% static './public/vector9.svg' %}"
+                      />
+
+                      <div class="usd2">USD</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="frame-parent17">
+                <div class="frame-wrapper9">
+                  <div class="vector-parent3">
+                    <img
+                      class="vector-icon12"
+                      alt=""
+                      src="{% static './public/vector10.svg' %}"
+                    />
+
+                    <img
+                      class="vector-icon13"
+                      alt=""
+                      src="{% static './public/vector11.svg' %}"
+                    />
+
+                    <img
+                      class="vector-icon14"
+                      alt=""
+                      src="{% static './public/vector12.svg' %}"
+                    />
+                  </div>
+                </div>
+                <div class="frame-parent18">
+                  <div class="layout-container-wrapper">
+                    <div class="layout-container">
+                      <div class="div48">$1,393.51</div>
+                      <div class="div49">+0.000%</div>
+                    </div>
+                  </div>
+                  <img
+                    class="frame-child26"
+                    loading="lazy"
+                    alt=""
+                    src="{% static './public/vector-1.svg' %}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="frame-parent19">
+              <img
+                class="frame-child27"
+                alt=""
+                src="{% static './public/group-1171275034.svg' %}"
+              />
+
+              <div class="frame-parent20">
+                <div class="frame-parent21">
+                  <img
+                    class="frame-child28"
+                    loading="lazy"
+                    alt=""
+                    src="{% static './public/group-11712750671.svg' %}"
+                  />
+
+                  <div class="yen-wrapper">
+                    <div class="yen">YEN</div>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="div50">¥9.21</div>
+                  <div class="div51">+0.061%</div>
+                </div>
+              </div>
+              <div class="vector-wrapper">
+                <img
+                  class="frame-child29"
+                  loading="lazy"
+                  alt=""
+                  src="{% static 'public/vector-2.svg' %}"
+                />
+              </div>
+            </div>
+            <div class="frame-parent22">
+              <img
+                class="frame-child30"
+                alt=""
+                src="{% static './public/group-1171275034.svg' %}"
+              />
+
+              <div class="frame-parent23">
+                <div class="claritypound-solid-parent">
+                  <img
+                    class="claritypound-solid-icon1"
+                    loading="lazy"
+                    alt=""
+                    src="{% static './public/claritypoundsolid.svg' %}"
+                  />
+
+                  <div class="eur-wrapper">
+                    <div class="eur1">EUR</div>
+                  </div>
+                </div>
+                <div class="parent1">
+                  <div class="div52">£1,503.13</div>
+                  <div class="div53">+0.036%</div>
+                </div>
+              </div>
+              <div class="vector-frame">
+                <img
+                  class="frame-child31"
+                  loading="lazy"
+                  alt=""
+                  src="{% static './public/vector-3.svg' %}"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

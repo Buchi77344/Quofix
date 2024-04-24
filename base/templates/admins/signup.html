@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'css/global.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/Register.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Work Sans:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Satoshi Variable:wght@400;500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Podkova:wght@500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mandali:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="register">
+      <h1 class="register-as-a">Register as a new user</h1>
+      <section class="registration-form">
+        <div class="input-fields1">
+          <img
+            class="user-file-icon"
+            loading="lazy"
+            alt=""
+            src="{% static './public/user-file@2x.png' %}"
+          />
+        </div>
+        <form  method ="post" class="name-email-inputs">
+          {% csrf_token %}
+          <div class="input-labels">
+            <div class="input-field-containers">
+              <div class="enter-first-name">Username</div>
+              <input  name="username" class="input-fields2" type="text" />
+            </div>
+            <div class="input-field-containers2">
+              <div class="enter-email-address1">Enter Email Address</div>
+              <input name= "email" class="input-field-containers-item" type="email" />
+            </div>
+            <div class="input-field-containers3">
+              <div class="choose-password">Choose Password</div>
+              <input name="password" class="input-field-containers-inner" type="password" />
+            </div>
+            <div class="input-field-containers4">
+              <div class="confirm-password">Confirm Password</div>
+              <input name= "password1" class="frame-input" type="password" />
+            </div>
+          </div>
+          <div class="action-buttons1">
+            <button class="register-button-container">
+              <div class="register1">Register</div>
+            </button>
+            <div class="sign-in-button-container">
+              <div class="if-you-already-container">
+                <span class="if-you-already-have-an-account">
+                  <span class="if-you-already"
+                    >If you already have an account?</span
+                  >
+                  <span class="span4"> </span>
+                </span>
+                <span class="sign-in2">
+                  <span class="sign-in3">Sign In</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>

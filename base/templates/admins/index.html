@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'css/global.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Work Sans:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Satoshi Variable:wght@400;500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Podkova:wght@500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mandali:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="dashboard">
+      <section class="navigation">
+        <div class="header">
+          <div class="header-child"></div>
+          <div class="navbar">
+            <img
+              class="separator-icon"
+              loading="lazy"
+              alt=""
+              src="{% static './public/20240408-161529-1@2x.png' %}"
+            />
+          </div>
+          <div class="content-area-parent">
+            <button class="content-area">
+              <img
+                class="dashboard-1-1"
+                alt=""
+                src="{% static './public/dashboard-1-1.svg' %}"
+              />
+
+              <div class="heading-area">
+                <div class="dashboard1">Dashboard</div>
+              </div>
+            </button>
+            <div class="navigation-labels">
+              <img
+                class="computer-1-1"
+                alt=""
+                src="{% static './public/computer-1-1.svg' %}"
+              />
+
+             
+              <a href="Transcation"> <div class="transactions">Transactions</div></a>
+            </div>
+            <div class="navigation-labels1">
+              <img class="log-out-1-icon" alt="" src="{% static './public/logout-1.svg' %}" />
+
+              <div class="log-out">Log Out</div>
+            </div>
+          </div>
+        </div>
+        <div class="top-row-wrapper">
+          <div class="top-row">
+            <div class="left-column">
+              <div class="summary-container">
+                <div class="summary-card">
+                  <div class="summary-title">
+                    <h1 class="summary">Summary</h1>
+                    <button class="add-button-1-parent">
+                      <img
+                        class="add-button-1-icon"
+                        alt=""
+                        src="{% static './public/addbutton-1.svg' %}"
+                      />
+
+                      <div class="register-a-new-admin-wrapper">
+                        <div class="register-a-new">Register a new Admin</div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+                <div class="profile-container">
+                  <div class="profile-card">
+                    <div class="user-info">
+                      <img
+                        class="user-info-child"
+                        alt=""
+                        src="{% static './public/group-29669@2x.png' %}"
+                      />
+
+                      <div class="user-name">
+                        <div class="good-day">Good Day,</div>
+                        <div class="omologo-eleniyan">Omologo Eleniyan</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post-updates-wrapper">
+                    <div class="post-updates">Post Updates</div>
+                  </div>
+                </div>
+              </div>
+              <div class="stats-container-wrapper">
+                <div class="stats-container">
+                  <div class="transaction-stats">
+                    <div class="stats-header">
+                      <div class="approved-values-wrapper">
+                        <div class="approved-values">
+                          <div class="total-approved-transaction">
+                            Total Approved transaction
+                          </div>
+                          <div class="approved-count">
+                            <div class="approved-number">58</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="stats-header-child"></div>
+                    </div>
+                    <div class="stats-header1">
+                      <div class="frame-parent">
+                        <div class="frame-child"></div>
+                        <div class="total-pending-transaction">
+                          Total Pending Transaction
+                        </div>
+                        <div class="separator-labels">
+                          <div class="div">13</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="stats-header2">
+                      <div class="frame-group">
+                        <div class="frame-item"></div>
+                        <div class="rejected-transaction">
+                          Rejected Transaction
+                        </div>
+                        <div class="wrapper">
+                          <div class="div1">00</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="transaction-graph">
+                    <div class="graph-header">
+                      <div class="transaction-rate">Transaction Rate</div>
+                      <div class="graph-content">
+                        <div class="pie-chart">
+                          <div class="chart-area">
+                            <div class="chart-footer">
+                              <div class="last-7-days">Last 7 Days</div>
+                              <img
+                                class="caretdown-icon"
+                                alt=""
+                                src="{% static './public/caretdown.svg' %}"
+                              />
+                            </div>
+                          </div>
+                          <div class="chart-legend">
+                            <div class="legend">
+                              <div class="legend-series">
+                                <div class="color-wrapper">
+                                  <div class="color"></div>
+                                </div>
+                                <div class="series-1">Approved</div>
+                              </div>
+                              <div class="legend-series1">
+                                <div class="color-container">
+                                  <div class="color1"></div>
+                                </div>
+                                <div class="series-2">Pending</div>
+                              </div>
+                              <div class="legend-series2">
+                                <div class="color-frame">
+                                  <div class="color2"></div>
+                                </div>
+                                <div class="series-3">Rejected</div>
+                              </div>
+                              <div class="legend-series3">
+                                <div class="color3"></div>
+                                <div class="series-4">Series 4</div>
+                              </div>
+                              <div class="legend-series4">
+                                <div class="color4"></div>
+                                <div class="series-5">Series 5</div>
+                              </div>
+                              <div class="legend-series5">
+                                <div class="color5"></div>
+                                <div class="series-6">Series 6</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="chart-y-axis">
+                            <div class="y-axis">
+                              <div class="y-axis-line">
+                                <div class="divider"></div>
+                              </div>
+                              <div class="y-axis-line1">
+                                <div class="divider1"></div>
+                              </div>
+                              <div class="y-axis-line2">
+                                <div class="divider2"></div>
+                              </div>
+                              <div class="y-axis-line3">
+                                <div class="divider3"></div>
+                              </div>
+                              <div class="y-axis-line4">
+                                <div class="divider4"></div>
+                              </div>
+                              <div class="y-axis-line5">
+                                <div class="divider5"></div>
+                              </div>
+                              <div class="y-axis-line6">
+                                <div class="divider6"></div>
+                              </div>
+                              <div class="y-axis-line7">
+                                <div class="divider7"></div>
+                              </div>
+                              <div class="y-axis-line8">
+                                <div class="divider8"></div>
+                              </div>
+                              <div class="y-axis-line9">
+                                <div class="divider9"></div>
+                              </div>
+                              <div class="y-axis-line10">
+                                <div class="divider10"></div>
+                              </div>
+                              <div class="y-axis-line11">
+                                <div class="divider11"></div>
+                              </div>
+                            </div>
+                            <div class="chart-x-axis">
+                              <div class="chart">
+                                <img
+                                  class="bar-icon"
+                                  loading="lazy"
+                                  alt=""
+                                  src="{% static './public/bar.svg' %}"
+                                />
+
+                                <img
+                                  class="bar-icon1"
+                                  alt=""
+                                  src="{% static './public/bar-1.svg' %}"
+                                />
+
+                                <img
+                                  class="bar-icon2"
+                                  alt=""
+                                  src="{% static './public/bar-2.svg' %}"
+                                />
+
+                                <img
+                                  class="bar-icon3"
+                                  alt=""
+                                  src="{% static './public/bar-3.svg' %}"
+                                />
+
+                                <img
+                                  class="bar-icon4"
+                                  alt=""
+                                  src="{% static './public/bar-2.svg' %}"
+                                />
+
+                                <img
+                                  class="bar-icon5"
+                                  alt=""
+                                  src="{% static './public/bar-5.svg' %}"
+                                />
+
+                                <img
+                                  class="bar-icon6"
+                                  alt=""
+                                  src="{% static './public/bar.svg' %}"
+                                />
+
+                                <img
+                                  class="bar-icon7"
+                                  alt=""
+                                  src="{% static './public/bar-3.svg' %}"
+                                />
+
+                                <img
+                                  class="bar-icon8"
+                                  alt=""
+                                  src="{% static './public/bar.svg' %}"
+                                />
+
+                                <img
+                                  class="bar-icon9"
+                                  alt=""
+                                  src="{% static './public/bar-9.svg' %}"
+                                />
+
+                                <img
+                                  class="bar-icon10"
+                                  alt=""
+                                  src="{% static './public/bar-10.svg' %}"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="x-axis">
+                          <div class="mon">Mon</div>
+                          <div class="tue">Tue</div>
+                          <div class="wed">Wed</div>
+                          <div class="thu">Thu</div>
+                          <div class="fri">Fri</div>
+                          <div class="sat">Sat</div>
+                          <div class="sun">Sun</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="graph-header1">
+                      <div class="transaction-rate1">Transaction Rate</div>
+                      <div class="pie-chart-wrapper">
+                        <div class="pie-chart1">
+                          <img
+                            class="pie-chart-icon"
+                            alt=""
+                            src="{% static './public/-pie-chart.svg' %}"
+                          />
+
+                          <div class="legend1">
+                            <div class="legend-series6">
+                              <div class="dot">
+                                <div class="color6"></div>
+                              </div>
+                              <div class="series-11">Approved Transaction</div>
+                            </div>
+                            <div class="legend-series7">
+                              <div class="dot1">
+                                <div class="color7"></div>
+                              </div>
+                              <div class="series-21">Pending Transaction</div>
+                            </div>
+                            <div class="legend-series8">
+                              <div class="dot2">
+                                <div class="color8"></div>
+                              </div>
+                              <div class="series-31">Series 3</div>
+                            </div>
+                            <div class="legend-series9">
+                              <div class="dot3">
+                                <div class="color9"></div>
+                              </div>
+                              <div class="series-41">Series 4</div>
+                            </div>
+                            <div class="legend-series10">
+                              <div class="dot4">
+                                <div class="color10"></div>
+                              </div>
+                              <div class="series-51">Series 5</div>
+                            </div>
+                            <div class="legend-series11">
+                              <div class="dot5">
+                                <div class="color11"></div>
+                              </div>
+                              <div class="series-61">Series 6</div>
+                            </div>
+                            <div class="legend-series12">
+                              <div class="dot6">
+                                <div class="color12"></div>
+                              </div>
+                              <div class="series-62">Series 6</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="currency-container-wrapper">
+              <div class="currency-container">
+                <div class="currency-symbols">
+                  <div class="frame-container">
+                    <img
+                      class="frame-inner"
+                      alt=""
+                      src="{% static './public/group-1171275034.svg' %}"
+                    />
+
+                    <div class="currency-cards">
+                      <div class="currency-symbols-images">
+                        <img
+                          class="solardollar-bold-duotone-icon"
+                          loading="lazy"
+                          alt=""
+                          src="{% static './public/solardollarboldduotone.svg' %}"
+                        />
+
+                        <div class="currency-names-container">
+                          <div class="currency-name-abbr">
+                            <img
+                              class="vector-icon"
+                              alt=""
+                              src="{% static './public/vector.svg' %}"
+                            />
+
+                            <img
+                              class="vector-icon1"
+                              alt=""
+                              src="{% static './public/vector-1.svg' %}"
+                            />
+
+                            <img
+                              class="vector-icon2"
+                              alt=""
+                              src="{% static './public/vector-2.svg' %}"
+                            />
+
+                            <img
+                              class="vector-icon3"
+                              alt=""
+                              src="{% static './public/vector-3.svg' %}"
+                            />
+
+                            <div class="usd">USD</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="exchange-rates">
+                      <div class="exchange-rate-images">
+                        <div class="image-set">
+                          <img
+                            class="vector-icon4"
+                            alt=""
+                            src="{% static './public/vector-4.svg' %}"
+                          />
+
+                          <img
+                            class="vector-icon5"
+                            alt=""
+                            src="{% static './public/vector-5.svg' %}"
+                          />
+
+                          <img
+                            class="vector-icon6"
+                            alt=""
+                            src="{% static './public/vector-6.svg' %}"
+                          />
+                        </div>
+                      </div>
+                      <div class="exchange-rate-data">
+                        <div class="rate-value">
+                          <div class="parent">
+                            <div class="div2">$1,393.51</div>
+                            <div class="div3">+0.000%</div>
+                          </div>
+                        </div>
+                        <img
+                          class="exchange-rate-data-child"
+                          loading="lazy"
+                          alt=""
+                          src="{% static './public/vector-11.svg' %}"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="group-div">
+                    <img
+                      class="group-icon"
+                      alt=""
+                      src="{% static './public/group-1171275034.svg' %}"
+                    />
+
+                    <div class="frame-div">
+                      <div class="frame-parent1">
+                        <img
+                          class="frame-child1"
+                          loading="lazy"
+                          alt=""
+                          src="{% static './public/group-1171275067.svg' %}"
+                        />
+
+                        <div class="gpb-wrapper">
+                          <div class="gpb">GPB</div>
+                        </div>
+                      </div>
+                      <div class="group">
+                        <div class="div4">¥9.21</div>
+                        <div class="currency-divider">+0.061%</div>
+                      </div>
+                    </div>
+                    <div class="vector-wrapper">
+                      <img
+                        class="frame-child2"
+                        loading="lazy"
+                        alt=""
+                        src="{% static './public/vector-21.svg' %}"
+                      />
+                    </div>
+                  </div>
+                  <div class="frame-parent2">
+                    <img
+                      class="frame-child3"
+                      alt=""
+                      src="{% static './public/group-1171275034.svg' %}"
+                    />
+
+                    <div class="frame-parent3">
+                      <div class="claritypound-solid-parent">
+                        <img
+                          class="claritypound-solid-icon"
+                          loading="lazy"
+                          alt=""
+                          src="{% static './public/claritypoundsolid.svg' %}"
+                        />
+
+                        <div class="eur-wrapper">
+                          <div class="eur">EUR</div>
+                        </div>
+                      </div>
+                      <div class="container">
+                        <div class="div5">£1,503.13</div>
+                        <div class="div6">+0.036%</div>
+                      </div>
+                    </div>
+                    <div class="vector-container">
+                      <img
+                        class="frame-child4"
+                        loading="lazy"
+                        alt=""
+                        src="{% static './public/vector-31.svg' %}"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="transaction-options">
+                  <div class="funds-actions">
+                    <button class="action-cards">
+                      <div class="action-icons">
+                        <img
+                          class="action-image-icon"
+                          alt=""
+                          src="{% static './public/vector-7.svg' %}"
+                        />
+                      </div>
+                      <div class="transfer-funds">Transfer Funds</div>
+                    </button>
+                    <button class="action-cards1">
+                      <div class="vector-frame">
+                        <img
+                          class="vector-icon7"
+                          alt=""
+                          src="{% static './public/vector-8.svg' %}"
+                        />
+                      </div>
+                      <div class="add-funds">Add Funds</div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="transactions-view-wrapper">
+        <div class="transactions-view">
+          <div class="history-container">
+            <div class="history-container-inner">
+              <div class="rectangle-parent">
+                <div class="rectangle-div"></div>
+                <div class="transaction-history-table">
+                  <div class="history-table-title">
+                    <div class="transcation-history">Transcation History</div>
+                  </div>
+                  <div class="rectangle-group">
+                    <div class="frame-child5"></div>
+                    <img class="union-icon" alt="" src="{% static './public/union.svg' %}" />
+
+                    <div class="column-divider">29/03/24</div>
+                  </div>
+                </div>
+                <div class="rectangle-container">
+                  <div class="frame-child6"></div>
+                  <div class="currency-type">
+                    <img
+                      class="solardollar-bold-duotone-icon1"
+                      alt=""
+                      src="{% static './public/solardollarboldduotone-1.svg' %}"
+                    />
+                  </div>
+                  <div class="currency-name-abrv">
+                    <div class="transaction-pair-name">
+                      <div class="usdngn">USD/NGN</div>
+                      <div class="to-4000-15092023-container">
+                        <p class="to">$100 to #4000</p>
+                        <p class="p">15/09/2023 . 19:30</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="transaction-status">
+                    <div class="pending">Pending</div>
+                  </div>
+                </div>
+                <div class="rectangle-parent1">
+                  <div class="frame-child7"></div>
+                  <div class="claritypound-solid-wrapper">
+                    <img
+                      class="claritypound-solid-icon1"
+                      alt=""
+                      src="{% static './public/claritypoundsolid-1.svg' %}"
+                    />
+                  </div>
+                  <div class="frame-wrapper">
+                    <div class="eurngn-parent">
+                      <div class="eurngn">EUR/NGN</div>
+                      <div class="e2000-to-40-container">
+                        <p class="e2000">E2000 to #40</p>
+                        <p class="p1">20/20/2001 . 08:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="approved-wrapper">
+                    <div class="approved">Approved</div>
+                  </div>
+                </div>
+                <div class="rectangle-parent2">
+                  <div class="frame-child8"></div>
+                  <div class="solardollar-bold-duotone-wrapper">
+                    <img
+                      class="solardollar-bold-duotone-icon2"
+                      alt=""
+                      src="{% static './public/solardollarboldduotone-2.svg' %}"
+                    />
+                  </div>
+                  <div class="frame-wrapper1">
+                    <div class="audngn-parent">
+                      <div class="audngn">AUD/NGN</div>
+                      <div class="to-5000-23122003-container">
+                        <p class="to1">$700 to #5000</p>
+                        <p class="p2">23/12/2003 . 12:45</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pending-wrapper">
+                    <div class="pending1">Pending</div>
+                  </div>
+                </div>
+                <div class="rectangle-parent3">
+                  <div class="frame-child9"></div>
+                  <div class="frame-wrapper2">
+                    <img
+                      class="frame-child10"
+                      alt=""
+                      src="{% static './public/group-1171275067-1.svg' %}"
+                    />
+                  </div>
+                  <div class="frame-wrapper3">
+                    <div class="yenngn-parent">
+                      <div class="yenngn">YEN/NGN</div>
+                      <div class="y400-to-5000-container">
+                        <p class="y400">Y400 to $5000</p>
+                        <p class="p3">20/3/2004 . 13:40</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="approved-container">
+                    <div class="approved1">Approved</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rectangle-parent4">
+              <div class="frame-child11"></div>
+              <div class="overview-content">
+                <div class="overview-details">
+                  <div class="overview-header">
+                    <div class="overview-title">
+                      <div class="market-overview">Market Overview</div>
+                      <div class="pictorial-monthly-analytcs">
+                        Pictorial monthly analytcs of market.
+                      </div>
+                    </div>
+                    <div class="market-charts">
+                      <div class="chart-header">
+                        <div class="chart-title-container">
+                          <div class="title-icon">
+                            <img
+                              class="title-icon-child"
+                              loading="lazy"
+                              alt=""
+                              src="{% static './public/group-1171274958.svg' %}"
+                            />
+                          </div>
+                          <div class="usd1">USD</div>
+                        </div>
+                      </div>
+                      <div class="chart-type-selection">
+                        <div class="chart-types">
+                          <div class="type-cards">
+                            <div class="type-icon">
+                              <div class="chart-type-shape"></div>
+                            </div>
+                            <div class="eur1">EUR </div>
+                          </div>
+                          <div class="type-cards1">
+                            <div class="type-cards-inner">
+                              <div class="ellipse-div"></div>
+                            </div>
+                            <div class="gbp">GBP</div>
+                          </div>
+                          <div class="type-cards2">
+                            <div class="type-cards-child">
+                              <div class="frame-child12"></div>
+                            </div>
+                            <div class="cad">CAD</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="rectangle-parent5">
+                        <div class="frame-child13"></div>
+                        <div class="weekly2022">Weekly(2022)</div>
+                        <div class="vector-wrapper1">
+                          <img
+                            class="vector-icon8"
+                            alt=""
+                            src="{% static './public/vector-9.svg' %}"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chart-visualisation">
+                    <div class="visualisation-content">
+                      <img
+                        class="group-icon1"
+                        alt=""
+                        src="{% static './public/group.svg' %}"
+                      />
+
+                      <img
+                        class="visualisation-content-child"
+                        loading="lazy"
+                        alt=""
+                        src="{% static './public/group-25489.svg' %}"
+                      />
+                    </div>
+                    <div class="chart-details">
+                      <img
+                        class="chart-details-child"
+                        loading="lazy"
+                        alt=""
+                        src="{% static './public/group-25478.svg' %}"
+                      />
+
+                      <img
+                        class="group-icon2"
+                        alt=""
+                        src="{% static './public/group-1.svg' %}"
+                      />
+
+                      <div class="graph-specifics">
+                        <img
+                          class="group-icon3"
+                          alt=""
+                          src="{% static './public/group-2.svg' %}"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="trade-comparison">
+                  <div class="comparison-details">
+                    <div class="comparison-header">
+                      <div class="h">1h</div>
+                      <div class="header-icon-container">
+                        <img
+                          class="header-icon-container-child"
+                          loading="lazy"
+                          alt=""
+                          src="{% static './public/group-25487.svg' %}"
+                        />
+                      </div>
+                      <div class="price-container">
+                        <div class="price-change">
+                          <img
+                            class="price-change-child"
+                            loading="lazy"
+                            alt=""
+                            src="{% static './public/group-25488.svg' %}"
+                          />
+                        </div>
+                        <div class="compare">Compare</div>
+                      </div>
+                    </div>
+                    <div class="indicators">Indicators</div>
+                  </div>
+                  <div class="indicator-row-container">
+                    <div class="indicator-first-row">
+                      <div class="usdngn1">USD/NGN</div>
+                      <img
+                        class="indicator-first-row-child"
+                        loading="lazy"
+                        alt=""
+                        src="{% static './public/group-1171274952.svg' %}"
+                      />
+                    </div>
+                    <div class="indicator-row-items">
+                      <div class="indicator-row-titles">1</div>
+                    </div>
+                    <div class="indicator-second-row">
+                      <img
+                        class="indicator-second-row-child"
+                        loading="lazy"
+                        alt=""
+                        src="{% static './public/group-25484.svg' %}"
+                      />
+                    </div>
+                    <div class="indicator-row-items1">
+                      <div class="o3803268">
+                        <span>O</span>
+                        <span class="span">38032.68</span>
+                      </div>
+                    </div>
+                    <div class="indicator-row-items2">
+                      <div class="h3803268">
+                        <span>H</span>
+                        <span class="span1">38032.68</span>
+                      </div>
+                    </div>
+                    <div class="indicator-row-items3">
+                      <div class="l3803268">
+                        <span>L</span>
+                        <span class="span2">38032.68</span>
+                      </div>
+                    </div>
+                    <div class="indicator-row-items4">
+                      <div class="c3803268">
+                        <span>C</span>
+                        <span class="span3">38032.68</span>
+                      </div>
+                    </div>
+                    <div class="indicator-row-items5">
+                      <div class="div7">0.00</div>
+                    </div>
+                    <div class="placeholder">(0.00%)</div>
+                  </div>
+                </div>
+              </div>
+              <div class="o-h-l-c-title-row">
+                <div class="o-h-l-c-container">
+                  <img
+                    class="o-h-l-c-container-child"
+                    alt=""
+                    src="{% static './public/group-25483.svg' %}"
+                  />
+
+                  <div class="o-h-l-c-titles">
+                    <div class="o-h-l">42000.00</div>
+                  </div>
+                  <div class="placeholder1">42500.00</div>
+                  <div class="o-h-l-c-titles1">
+                    <div class="div8">415000.00</div>
+                  </div>
+                  <div class="o-h-l-c-titles2">
+                    <div class="div9">41000.00</div>
+                  </div>
+                  <div class="o-h-l-c-titles3">
+                    <div class="div10">40500.00</div>
+                  </div>
+                  <div class="o-h-l-c-titles4">
+                    <div class="div11">40000.00</div>
+                  </div>
+                  <div class="second-row">
+                    <div class="second-row-value">
+                      <img
+                        class="group-icon4"
+                        alt=""
+                        src="{% static './public/group-3.svg' %}"
+                      />
+
+                      <div class="placeholder2">39500.00</div>
+                    </div>
+                    <div class="second-row-comparison">
+                      <div class="placeholder3">39000.00</div>
+                    </div>
+                  </div>
+                  <div class="third-row">
+                    <div class="third-row-items">
+                      <div class="third-row-titles">
+                        <div class="third-row-values">38500.00</div>
+                      </div>
+                      <button class="third-row-comparison">
+                        <div class="third-row-comparison-child"></div>
+                        <div class="placeholder4">38032.68</div>
+                      </button>
+                      <div class="third-row-titles1">
+                        <div class="div12">37500.00</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="o-h-l-c-titles5">
+                    <div class="k">800k</div>
+                  </div>
+                  <div class="o-h-l-c-titles6">
+                    <div class="div13">0</div>
+                  </div>
+                  <img
+                    class="o-h-l-c-container-item"
+                    loading="lazy"
+                    alt=""
+                    src="{% static './public/group-1171274951.svg' %}"
+                  />
+                </div>
+                <div class="table-container">
+                  <div class="table-header-row">
+                    <div class="table-headers">
+                      <div class="table-header-titles">2:00</div>
+                    </div>
+                    <div class="table-headers1">
+                      <div class="div14">02:15</div>
+                    </div>
+                    <div class="table-headers2">02:30</div>
+                    <div class="table-headers3">
+                      <div class="div15">02:45</div>
+                    </div>
+                    <div class="table-headers4">
+                      <div class="div16">03:00</div>
+                    </div>
+                    <div class="table-headers5">
+                      <div class="div17">03:15</div>
+                    </div>
+                    <div class="table-headers6">03:30</div>
+                    <div class="table-headers7">
+                      <div class="div18">03:45</div>
+                    </div>
+                    <div class="table-headers8">04:00</div>
+                    <div class="table-headers9">
+                      <div class="div19">04:15</div>
+                    </div>
+                    <div class="table-headers10">04:30</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="market-rate-container">
+            <div class="market-rate-card">
+              <div class="market-rate-title-row">
+                <h1 class="market-rate">Market Rate</h1>
+                <div class="market-rate-date">
+                  <div class="today-12th-june">TODAY 12th JUNE 2024</div>
+                </div>
+              </div>
+              <div class="rate-table">
+                <div class="rate-table-header">
+                  <div class="rate-table-header-items">
+                    <div class="currency">Currency</div>
+                    <div class="rate-table-dividers"></div>
+                    <div class="funding-rate">Funding rate</div>
+                    <div class="black-market">Black market</div>
+                  </div>
+                  <div class="rate-table-header-items1">
+                    <div class="usd2">1 USD</div>
+                    <div class="rate-table-header-items-child"></div>
+                    <div class="div20">1,393.51/ $</div>
+                    <div class="ngn-140000">NGN 1400.00</div>
+                  </div>
+                  <div class="rate-table-header-items2">
+                    <div class="gbp1">1 GBP</div>
+                    <div class="rate-table-header-items-item"></div>
+                    <div class="e">1,758.18/ E</div>
+                    <div class="ngn-165005">NGN 1650.05</div>
+                  </div>
+                  <div class="rate-table-header-items3">
+                    <div class="eur2">1 EUR</div>
+                    <div class="rate-table-header-items-inner"></div>
+                    <div class="e1">1907.73/ e</div>
+                    <div class="ngn200009">NGN2000.09</div>
+                  </div>
+                </div>
+              </div>
+              <div class="edit-button-row">
+                <button class="edit-button-container">
+                  <div class="edit">EDIT</div>
+                  <div class="edit-button-icon-container">
+                    <img
+                      class="group-icon5"
+                      alt=""
+                      src="{% static './public/group-4.svg' %}"
+                    />
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Approval</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .action-links a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .approve {
+            background-color: #4caf50;
+        }
+        .reject {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Admin Approval</h1>
+    {%  for tran in tran %}
+    <p>{{tran.message}}</p>
+    
+    <div class="action-links">
+        <a class="approve" href="{% url 'admins:details' tran.pk %}">Approve</a>
+        <a class="reject" href="{%  url 'admins:delete'  tran.pk %}">Reject</a>
+    </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>

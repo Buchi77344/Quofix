@@ -1,0 +1,17 @@
+
+    <h1>Approve Transaction</h1>
+    <p>Transaction ID: {{ transaction.pk }}</p>
+    <p>Transaction Name:{{available_balance.user.username}} </p>
+    <p>Amount: ${{ transaction.amount }}</p>
+    <p>Action: {{ transaction.action }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="action" value="approve">
+        <button type="submit">Approve</button>
+    </form>
+
+ 
+ <button ><a href="delete/{{delete.pk}}">Reject</a></button>
+
+
+ 

@@ -1,0 +1,383 @@
+.signup-child1 {
+  height: 70px;
+  width: 180px;
+  position: relative;
+  object-fit: cover;
+}
+.create-an-account2 {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+}
+.please-tell-us2 {
+  position: relative;
+}
+.about-yourself {
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0 var(--padding-lgi) 0 var(--padding-lg);
+  font-size: var(--body-text-size);
+}
+.about-yourself,
+.user-details1,
+.user-questions {
+  display: flex;
+  align-items: flex-start;
+}
+.user-details1 {
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.user-questions {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: center;
+}
+.input-fields-updateddefault7,
+.input-fields-updateddefault8 {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: var(--color-ghostwhite-100);
+  height: 55px;
+  flex: 1;
+  border-radius: var(--br-9xs);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-mid) var(--padding-2xl-5);
+  box-sizing: border-box;
+  font-family: var(--body-text);
+  font-weight: 300;
+  font-size: var(--body-text-size);
+  color: var(--faded-purple);
+  min-width: 179px;
+}
+.input-fields-updateddefault-parent1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--gap-5xs);
+}
+.who-do-you12 {
+  width: 300px;
+  position: relative;
+  font-size: var(--body-text-size);
+  font-family: var(--body-text);
+  color: var(--faded-purple);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.text-fields8 {
+  flex: 1;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-ghostwhite-100);
+  overflow: hidden;
+  padding: var(--padding-mid) var(--padding-base);
+  box-sizing: border-box;
+}
+.input-fields-updateddefault9,
+.input-fields2,
+.text-fields8 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.input-fields-updateddefault9 {
+  flex: 1;
+}
+.input-fields2 {
+  align-self: stretch;
+  padding: 0 var(--padding-9xs);
+  box-sizing: border-box;
+}
+.more-options {
+  height: 21px;
+  width: 21px;
+  position: relative;
+  border-radius: 50%;
+}
+.scroll-vertical-arrows-icon2 {
+  width: 7.8px;
+  height: 16.4px;
+  position: relative;
+}
+.audience-input,
+.scrolling {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.scrolling {
+  flex-direction: column;
+  padding: var(--padding-10xs-3) 0 0;
+}
+.audience-input {
+  flex-direction: row;
+  gap: var(--gap-5xs);
+}
+.who-do-you13 {
+  width: 230px;
+  position: relative;
+  font-size: var(--body-text-size);
+  font-family: var(--body-text);
+  color: var(--faded-purple);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.input-fields-updateddefault10,
+.text-fields9 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.text-fields9 {
+  flex: 1;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-ghostwhite-100);
+  overflow: hidden;
+  padding: var(--padding-mid) var(--padding-base);
+  box-sizing: border-box;
+  gap: var(--gap-xl);
+}
+.input-fields-updateddefault10 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.frame-child37 {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+}
+.input-fields-updateddefault-parent2 {
+  height: 55px;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+}
+.input-fields3 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-9xs);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.input-fields4,
+.who-do-you14 {
+  font-size: var(--body-text-size);
+  font-family: var(--body-text);
+  color: var(--faded-purple);
+  display: flex;
+}
+.input-fields4 {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: var(--color-ghostwhite-100);
+  align-self: stretch;
+  height: 55px;
+  border-radius: var(--br-5xs);
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-mid) var(--padding-xl);
+  box-sizing: border-box;
+  min-width: 250px;
+}
+.who-do-you14 {
+  width: 300px;
+  position: relative;
+  text-align: left;
+  align-items: center;
+  flex-shrink: 0;
+}
+.input-fields-updateddefault11,
+.text-fields10 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.text-fields10 {
+  flex: 1;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-ghostwhite-100);
+  overflow: hidden;
+  padding: var(--padding-mid) var(--padding-base);
+  box-sizing: border-box;
+}
+.input-fields-updateddefault11 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.dark-eye-2-icon2 {
+  position: absolute;
+  top: 18px;
+  left: 498px;
+  width: 19.7px;
+  height: 19px;
+  overflow: hidden;
+  z-index: 1;
+}
+.input-fields-updateddefault-parent3 {
+  height: 55px;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+}
+.input-fields5 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-9xs);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.download-form6 {
+  position: relative;
+  font-size: var(--desktop-body-normal-semibold-size);
+  font-weight: 500;
+  font-family: var(--font-raleway);
+  color: var(--color-white);
+  text-align: left;
+  display: inline-block;
+  min-width: 36px;
+}
+.primary-button-frame,
+.primary-button4 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.primary-button4 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-mini) var(--padding-41xl);
+  background-color: var(--color-darkslategray-100);
+  border-radius: var(--br-5xl-5);
+  justify-content: flex-start;
+  opacity: 0.3;
+}
+.primary-button4:hover {
+  background-color: var(--color-slategray-100);
+}
+.primary-button-frame {
+  align-self: stretch;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+}
+.frame-parent21,
+.information-panel1 {
+  align-self: stretch;
+  flex-direction: column;
+  max-width: 100%;
+}
+.frame-parent21 {
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-13xl);
+}
+.information-panel1 {
+  border-radius: var(--br-5xl);
+  background-color: var(--color-white);
+  padding: var(--padding-33xl) var(--padding-31xl) var(--padding-31xl);
+  gap: var(--gap-33xl);
+}
+.information-panel1,
+.main-view1,
+.signup2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.main-view1 {
+  width: 658px;
+  flex-direction: column;
+  padding: var(--padding-20xl) 0 0;
+  max-width: 100%;
+}
+.signup2 {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-lavender-100);
+  overflow: hidden;
+  flex-direction: row;
+  padding: var(--padding-17xl) var(--padding-16xl) 76px;
+  gap: var(--gap-157xl);
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  font-size: var(--desktop-heading-title-3-semibold-size);
+  color: var(--color-black);
+  font-family: var(--body-text);
+}
+@media screen and (max-width: 1050px) {
+  .signup2 {
+    flex-wrap: wrap;
+    gap: var(--gap-69xl);
+  }
+}
+@media screen and (max-width: 750px) {
+  .input-fields-updateddefault-parent1 {
+    flex-wrap: wrap;
+  }
+  .frame-parent21 {
+    gap: var(--gap-base);
+  }
+  .information-panel1 {
+    gap: var(--gap-7xl);
+    padding: var(--padding-15xl) var(--padding-6xl) var(--padding-13xl);
+    box-sizing: border-box;
+  }
+  .signup2 {
+    gap: var(--gap-25xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .create-an-account2 {
+    font-size: var(--font-size-lgi);
+  }
+  .text-fields9 {
+    flex-wrap: wrap;
+  }
+  .input-fields-updateddefault-parent2 {
+    height: auto;
+    min-height: 55;
+  }
+  .signup2 {
+    gap: var(--gap-3xl);
+  }
+}

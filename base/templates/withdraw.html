@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdraw</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+        .error {
+            color: #d9534f;
+            margin-top: 10px;
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input[type="number"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            width: 100%;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        #withdrawal-charge, #total-withdrawal-amount {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Withdraw</h1>
+        
+        <p> user name {{ naira_wallet.user.username }} </p>
+        <p>Available Balance: {{ naira_wallet.balance }}</p>
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+        <form id="withdraw-form" method="post">
+            {% csrf_token %}
+            <label for="amount">Amount:</label>
+            <input type="number" name="amount" id="amount" placeholder="Enter amount" required>
+            <p id="withdrawal-charge">Withdrawal Charge: &#8358; 0.00</p>
+            <p id="total-withdrawal-amount">Total Withdrawal Amount: &#8358; 0.00</p>
+            <button type="submit" id="withdraw-button" disabled>Withdraw</button>
+        </form>
+    </div>
+
+    <script>
+        // Get references to elements
+        const amountInput = document.getElementById('amount');
+        const withdrawalCharge = document.getElementById('withdrawal-charge');
+        const totalWithdrawalAmount = document.getElementById('total-withdrawal-amount');
+        const withdrawButton = document.getElementById('withdraw-button');
+
+        // Function to calculate and update withdrawal charge and total withdrawal amount
+        function updateWithdrawalAmounts() {
+            const amount = parseFloat(amountInput.value);
+            if (!isNaN(amount)) {
+                // Calculate withdrawal charge and total withdrawal amount
+                const chargePercentage = {% if withdrawal_charge %}{{ withdrawal_charge }}{% else %}0{% endif %};
+                const withdrawalChargeValue = (amount * chargePercentage).toFixed(2);
+                const totalWithdrawalAmountValue = (amount + parseFloat(withdrawalChargeValue)).toFixed(2);
+
+                // Update text content of elements
+                withdrawalCharge.textContent = `Withdrawal Charge: ${withdrawalChargeValue}`;
+                totalWithdrawalAmount.textContent = `Total Withdrawal Amount: ${totalWithdrawalAmountValue}`;
+
+                // Enable withdraw button
+                withdrawButton.removeAttribute('disabled');
+            } else {
+                // Reset values and disable withdraw button if amount is not valid
+                withdrawalCharge.textContent = 'Withdrawal Charge: #0.00';
+                totalWithdrawalAmount.textContent = 'Total Withdrawal Amount: #0.00';
+                withdrawButton.setAttribute('disabled', 'true');
+            }
+        }
+
+        // Add event listener to amount input field
+        amountInput.addEventListener('input', updateWithdrawalAmounts);
+
+        // Call the function initially to set initial values
+        updateWithdrawalAmounts();
+    </script>
+</body>
+</html>

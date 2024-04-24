@@ -1,0 +1,15 @@
+first signup
+1 first name
+2 last name
+3 email
+4 phone number
+
+second sigin up
+1 username
+2 password
+3 comfirm password
+
+third signup
+1 your bank mame 
+2 account name
+3 account number

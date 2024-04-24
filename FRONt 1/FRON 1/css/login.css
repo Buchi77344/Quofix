@@ -1,0 +1,290 @@
+.login-child {
+  width: 180px;
+  height: 70px;
+  position: relative;
+  object-fit: cover;
+}
+.log-in {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  min-width: 72px;
+  white-space: nowrap;
+}
+.form-header {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+}
+.kinldy-enter-the {
+  position: relative;
+  font-size: var(--font-size-xs);
+  font-weight: 300;
+  color: var(--color-darkslategray-100);
+  text-align: center;
+}
+.login-form,
+.login-form-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+.login-form {
+  width: 301px;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.login-form-wrapper {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: center;
+}
+.welcome-back {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  line-height: 33px;
+  font-weight: 400;
+  font-family: inherit;
+}
+.tdesignwave-right-icon {
+  height: 35px;
+  width: 35px;
+  position: relative;
+  min-height: 35px;
+}
+.welcome-content,
+.welcome-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.welcome-content {
+  gap: 25px;
+}
+.welcome-content-wrapper {
+  padding: 0 var(--padding-5xs);
+}
+.welcome-container-child {
+  align-self: stretch;
+  height: 292px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.welcome-container {
+  width: 301px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.input-fields-updateddefault3,
+.input-fields-updateddefault4,
+.login-body {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.login-body {
+  justify-content: center;
+  padding: 0 0 14px var(--padding-12xs);
+  font-size: 35px;
+  color: var(--color-steelblue-100);
+  font-family: var(--font-lato);
+}
+.input-fields-updateddefault3,
+.input-fields-updateddefault4 {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: var(--color-ghostwhite);
+  height: 55px;
+  border-radius: var(--br-5xs);
+  justify-content: flex-start;
+  padding: var(--padding-mid) var(--padding-base);
+  box-sizing: border-box;
+  font-family: var(--body-text);
+  font-size: var(--body-text-size);
+  color: var(--faded-purple);
+  min-width: 250px;
+}
+.forgot-password {
+  position: relative;
+  font-size: var(--font-size-xs);
+  line-height: 22px;
+  font-weight: 500;
+  font-family: var(--body-text);
+  color: var(--color-black);
+  text-align: left;
+  display: inline-block;
+  min-width: 107px;
+}
+.forgot-password-link {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.download-form6 {
+  position: relative;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  font-family: var(--font-raleway);
+  color: var(--color-white);
+  text-align: left;
+  display: inline-block;
+  min-width: 46px;
+}
+.primary-button4 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-mini) var(--padding-41xl);
+  background-color: var(--color-steelblue-100);
+  border-radius: var(--br-55xl-5);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  white-space: nowrap;
+}
+.primary-button4:hover {
+  background-color: var(--color-cornflowerblue);
+}
+.button-container,
+.password-container {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+}
+.button-container {
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+}
+.password-container {
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1px;
+}
+.dont-have-an,
+.sign-up {
+  font-family: var(--body-text);
+  color: var(--color-black);
+}
+.sign-up {
+  text-decoration: underline;
+  font-weight: 500;
+  color: var(--color-steelblue-200);
+}
+.dont-have-an-container {
+  position: relative;
+  font-size: var(--font-size-xs);
+  line-height: 22px;
+  text-align: left;
+}
+.sign-up-container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 var(--padding-xl) 0 24px;
+}
+.field-container,
+.login-window {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.field-container {
+  margin: 0;
+  align-self: stretch;
+  align-items: flex-start;
+  gap: 24px;
+}
+.login-window {
+  width: 650px;
+  border-radius: var(--br-5xl);
+  background-color: var(--color-white);
+  align-items: flex-end;
+  padding: 52px var(--padding-31xl) var(--padding-13xl);
+  box-sizing: border-box;
+  gap: 43px;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--color-black);
+  font-family: var(--body-text);
+}
+.login,
+.login-container {
+  display: flex;
+  align-items: flex-start;
+}
+.login-container {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 100%;
+}
+.login {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-lavender);
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-17xl) var(--padding-16xl) 102px;
+  box-sizing: border-box;
+  gap: 2px;
+  line-height: normal;
+  letter-spacing: normal;
+}
+@media screen and (max-width: 825px) {
+  .welcome-back {
+    font-size: 28px;
+    line-height: 26px;
+  }
+  .login-window {
+    padding-top: var(--padding-15xl);
+    padding-bottom: var(--padding-2xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 675px) {
+  .login-window {
+    gap: var(--gap-2xl);
+    padding-left: var(--padding-6xl);
+    padding-right: var(--padding-6xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .log-in {
+    font-size: var(--font-size-lgi);
+  }
+  .welcome-back {
+    font-size: 21px;
+    line-height: 19px;
+  }
+  .welcome-content {
+    flex-wrap: wrap;
+  }
+  .login-window {
+    padding-top: var(--padding-3xl);
+    padding-bottom: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}

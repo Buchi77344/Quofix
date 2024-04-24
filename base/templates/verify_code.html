@@ -1,0 +1,22 @@
+<!-- verify_code.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Code</title>
+</head>
+<body>
+
+    <h2>Verify Code</h2>
+    {% for messages in messages %}
+    <h3>{{messages}}</h3>
+    {% endfor %}
+    <form method="post">
+        {% csrf_token %}
+        <label for="code">Enter Code:</label><br>
+        <input type="text" id="code" name="code"><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
